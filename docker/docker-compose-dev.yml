@@ -1,0 +1,23 @@
+version: "3.8"
+
+networks:
+  template-network:
+    driver: bridge
+#    external: true
+
+services:
+  db:
+    image: postgres:11.4
+    container_name: database-template
+    #platform: linux/x86_64
+    environment:
+      - POSTGRES_DB=template-test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_USER=test
+    networks:
+      - template-network
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db/roles.sql:/docker-entrypoint-initdb.d/roles.sql
+    restart: always
