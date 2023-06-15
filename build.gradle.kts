@@ -24,6 +24,7 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation ("org.flywaydb:flyway-core:9.16.0")
+	implementation("com.vladmihalcea:hibernate-types-52:2.21.1")
 
 
 	runtimeOnly("org.postgresql:postgresql")
