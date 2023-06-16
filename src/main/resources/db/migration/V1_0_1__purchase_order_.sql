@@ -4,13 +4,10 @@ CREATE TABLE purchase_order (
     status                  VARCHAR(200)    NOT NULL,
     status_internal         VARCHAR(200)    NOT NULL,
     business_unit           VARCHAR(30)     NOT NULL,
-    emitter                 VARCHAR(100)    NOT NULL,
-    emitter_identifier      VARCHAR(100)    ,
-    created_by              VARCHAR(200)    ,
-    expected_delivery_at    TIMESTAMP       ,
+
     shipping_type           VARCHAR(100)    ,
     erp                     VARCHAR(30)     ,
-    order_reason            VARCHAR(255)    ,
+
 
     error_code              VARCHAR(50)     ,
     error_message           TEXT            ,
