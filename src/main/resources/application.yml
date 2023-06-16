@@ -20,3 +20,9 @@ spring:
           batch_size: 100
         hbm2ddl:
           auto: validate
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/template-test
+    username: test
+    password: test
+    pool.initial-size: 5
+    driver: io.r2dbc.postgresql.PostgresqlConnectionFactory

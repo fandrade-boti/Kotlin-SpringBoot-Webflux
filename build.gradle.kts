@@ -6,7 +6,7 @@ plugins {
 	kotlin("jvm") version "1.8.21"
 	kotlin("plugin.spring") version "1.8.21"
 	kotlin("plugin.jpa") version "1.8.21"
-	id("org.flywaydb.flyway") version "9.19.4"
+	id("org.flywaydb.flyway") version "9.19.3"
 }
 
 group = "com.template"
@@ -25,10 +25,12 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation ("org.flywaydb:flyway-core:9.16.0")
 	implementation("com.vladmihalcea:hibernate-types-52:2.21.1")
+	implementation("org.springframework.boot:spring-boot-starter-webflux")
+	implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
+	implementation ("io.r2dbc:r2dbc-postgresql:0.8.13.RELEASE" )
+	implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
 
-
-	runtimeOnly("org.postgresql:postgresql")
-
+	implementation("org.postgresql:postgresql:42.5.4")
 
 
 

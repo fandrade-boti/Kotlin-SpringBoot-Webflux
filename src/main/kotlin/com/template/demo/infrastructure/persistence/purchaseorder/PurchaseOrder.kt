@@ -7,16 +7,19 @@ import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.LastModifiedDate
 import org.springframework.data.jpa.domain.support.AuditingEntityListener
 import java.time.LocalDateTime
-import javax.persistence.*
 
+import org.springframework.data.relational.core.mapping.Table
+import org.springframework.data.annotation.Id
+import javax.persistence.*
+import javax.persistence.Column
 @Entity
-@Table(name = "purchaseOrder")
+@Table(name = "purchase_order")
 @EntityListeners(AuditingEntityListener::class)
 data class PurchaseOrder(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    val id: Long = 0L,
+    val id: Long,
 
     @Column(length = 30)
     val storeCode: String,
