@@ -20,4 +20,5 @@ services:
       - "5432:5432"
     volumes:
       - ./db/roles.sql:/docker-entrypoint-initdb.d/roles.sql
+      - ./db/postgresql.conf:/etc/postgresql/postgresql.conf
     restart: always

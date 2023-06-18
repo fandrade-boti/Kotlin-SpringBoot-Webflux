@@ -20,7 +20,11 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-amqp")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-web") {
+
+		exclude (group = "org.springframework.boot" , module = "spring-boot-starter-tomcat")
+	}
+
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation ("org.flywaydb:flyway-core:9.16.0")
@@ -31,6 +35,10 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
 
 	implementation("org.postgresql:postgresql:42.5.4")
+
+	implementation ("org.springframework.boot:spring-boot-starter-webflux")
+	implementation ("io.projectreactor:reactor-core")
+	implementation ("io.netty:netty-all")
 
 
 

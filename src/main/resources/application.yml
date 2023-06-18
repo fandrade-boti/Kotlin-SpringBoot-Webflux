@@ -26,3 +26,4 @@ spring:
     password: test
     pool.initial-size: 5
     driver: io.r2dbc.postgresql.PostgresqlConnectionFactory
+
